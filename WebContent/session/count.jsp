@@ -11,11 +11,18 @@
 	out.println("会员卡号是："+id);
 	
 	String tls[] = request.getParameterValues("tl");
-	for(String tl:tls){
+	/* for(String tl:tls){
 		byte b[] = tl.getBytes("ISO-8859-1");
 		String a = new String(b);
 		out.println(a);
-	}
+	} */
+	
+	 for(int i = 0;i<tls.length;i++){
+		byte b[] = tls[i].getBytes("ISO-8859-1");
+		String a = new String(b);
+		out.println(a);
+	} 
+	
 	
 	%>
 </body>
